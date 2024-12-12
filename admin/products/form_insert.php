@@ -72,11 +72,11 @@ require_once '../checkout_admin.php';
 <body>
     <?php 
     require_once '../connect.php';
-    $sql = "select * from classification";
-    $result = mysqli_query($connect,$sql);
+    $sql = "SELECT * FROM classification";  // lẤY tất cả danh mục sảm phẩm
+    $result = mysqli_query($connect,$sql);  // Thực hiện câu truy vấn
 
     ?>
-    <form action="process_insert.php" method="POST" enctype="multipart/form-data">
+    <form action="process_insert.php" method="POST" enctype="multipart/form-data">  <!-- enctype="multipart/form-data"> : Bắt buộc để gửi dữ liệu file như ảnh -->
         Tên 
         <input type="text" name="name">
         <br>
@@ -90,8 +90,8 @@ require_once '../checkout_admin.php';
         <br>
         Danh mục
         <select name="id_classify" >
-            <?php foreach ($result as $each) { ?>
-                <option value="<?php echo $each['id']?>">
+            <?php foreach ($result as $each) { ?>   <!-- Lặp qua các danh mục sản phẩm -->
+                <option value="<?php echo $each['id']?>">   <!--  Lấy id danh mục sảm phẩm  -->
                     <?php echo $each['name']?>
                 </option>
             <?php } ?>

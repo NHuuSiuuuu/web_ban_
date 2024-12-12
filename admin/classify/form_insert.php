@@ -1,5 +1,6 @@
 <?php 
-require_once '../checkout_super_admin.php';
+require_once '../checkout_admin.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +8,7 @@ require_once '../checkout_super_admin.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thêm danh mục sản phẩm</title>
-    <style>
+<style>
     /* Reset mặc định */
     body {
         font-family: Arial, sans-serif;
@@ -58,7 +59,8 @@ require_once '../checkout_super_admin.php';
 </style>
 </head>
 <body>
-    <form action="process_insert.php" method="POST">
+    <form action="process_insert.php" method="POST">    
+        <!-- Gửi dữ liệu từ form qua file pt... -->
         Tên 
         <input type="text" name="name">
         <br>

@@ -8,7 +8,6 @@ require_once '../checkout_admin.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sửa sản phẩm</title>
     <style>
-        /* Reset mặc định */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -17,7 +16,6 @@ require_once '../checkout_admin.php';
             color: #333;
         }
 
-        /* Form container */
         form {
             width: 450px;
             margin: 50px auto;
@@ -27,7 +25,6 @@ require_once '../checkout_admin.php';
             border-radius: 8px;
         }
 
-        /* Nhãn và đầu vào */
         form input[type="text"],
         form input[type="file"],
         form select {
@@ -45,7 +42,6 @@ require_once '../checkout_admin.php';
             display: inline-block;
         }
 
-        /* Ảnh cũ */
         form img {
             display: block;
             margin: 10px 0;
@@ -57,7 +53,6 @@ require_once '../checkout_admin.php';
             padding: 5px;
         }
 
-        /* Nút cập nhật */
         form button {
             display: block;
             width: 100%;

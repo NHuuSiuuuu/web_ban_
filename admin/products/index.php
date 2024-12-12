@@ -109,13 +109,11 @@ require_once '../checkout_admin.php';
     <a href="form_insert.php">
         Thêm sản phẩm
     </a>
+
     <?php 
+
     require_once '../connect.php';
-    $sql = "select
-    products.*,
-    classification.name as classification_name 
-    from products
-    join classification on products.id_classify = classification.id";
+    $sql = "SELECT products.*, classification.name as classification_name  FROM products JOIN classification ON products.id_classify = classification.id";
     $result = mysqli_query($connect,$sql);
     
     ?>
@@ -130,7 +128,7 @@ require_once '../checkout_admin.php';
             <th>Sửa</th>
             <th>Xóa</th>
         </tr>
-        <?php foreach ($result as $each) { ?>
+        <?php foreach ($result as $each) { ?>       
             <tr>
                 <td><?php echo $each['id']?></td>
                 <td><?php echo $each['name']?></td>

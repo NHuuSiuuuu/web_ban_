@@ -49,7 +49,7 @@ session_start();
         }
 
         .btn:hover {
-            background-color: #218838;  
+            background-color: #218838;
             transform: translateY(-3px);
         }
 
@@ -103,6 +103,8 @@ session_start();
         .wrapper {
             height: 100%;
             display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .list-image {
@@ -123,13 +125,15 @@ session_start();
             object-fit: cover;
             object-position: center;
             padding: 5px;
-           
+
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .list-image img:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
+            transform: scale(1.1);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
         .control {
             margin-top: 277px;
             font-size: 17px;
@@ -251,7 +255,7 @@ session_start();
                     <i class="fa-solid fa-chevron-left"></i>
                 </div>
                 <div class="img-wrapper">
-                    <img src="assets/img/5.jpg" class="img-feature" style="width:90%;height:100%;margin-left: 35px;object-fit: contain;">
+                    <img src="assets/img/5.jpg" class="img-feature" style="width:94%;height:100%;margin-left: 35px;object-fit: contain;">
                     <div class="banner-content">
                         <h1>Thiên Nhiên Trong Tầm Tay</h1>
                         <p>Khám phá bộ sưu tập đa dạng các loại cây cảnh và hoa vườn từ TREES.</p>

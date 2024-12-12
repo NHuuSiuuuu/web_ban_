@@ -1,5 +1,6 @@
 <?php
-require_once '../checkout_super_admin.php';
+require_once '../checkout_admin.php';
+
 require_once '../connect.php';
 $sql = "SELECT * FROM classification";
 $result = mysqli_query($connect, $sql);
@@ -114,7 +115,7 @@ $result = mysqli_query($connect, $sql);
             <th>Sửa</th>
             <th>Xóa</th>
         </tr>
-        <?php foreach ($result as $each) { ?>
+        <?php foreach ($result as $each) { ?>   <!-- Lặp qua từng dòng dữ liệu từ kết quả truy vấn -->
             <tr>
                 <td><?php echo $each['id'] ?></td>
                 <td><?php echo $each['name'] ?></td>

@@ -87,7 +87,7 @@ session_start();
 <body>
     <h1>Đây là trang Admin</h1>
     <?php if (isset($_SESSION['admin'])) { ?>
-        <a href="./classify/index.php">Trang nhà sản xuất</a>
+        <a href="./classify/index.php">Danh mục sản phẩm </a>
         <br>
         <a href="./products/index.php">Trang sản phẩm</a>
         <br>

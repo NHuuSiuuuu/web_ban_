@@ -1,5 +1,6 @@
 <?php
-require_once '../checkout_super_admin.php';
+require_once '../checkout_admin.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,12 +64,12 @@ require_once '../checkout_super_admin.php';
 <body>
     <?php
     require_once '../connect.php';
-    $id = $_GET['id'];
-    $sql = "select * from classification where id = '$id'";
+    $id = $_GET['id'];  // Lấy tham số `id` từ URL.
+    $sql = "SELECT * FROM classification WHERE id = '$id'";
     $result = mysqli_query($connect, $sql);
-    $each = mysqli_fetch_array($result);
+    $each = mysqli_fetch_array($result);    // Lấy dữ liệu từ kết quả truy vấn và lưu vào mảng `$each`.
     ?>
-    <form action="process_update.php" method="POST">
+    <form action="process_update.php" method="POST">    <!-- Gửi dữ liệu form đến file `process_update.php`. -->
         <input type="hidden" name="id" value="<?php echo $each['id'] ?>">
         <br>
         <input type="text" name="name" value="<?php echo $each['name'] ?>">
